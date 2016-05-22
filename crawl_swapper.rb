@@ -9,5 +9,9 @@ class CrawlSwapper
 		@credits.gsub! "Hans", "Meerkat"
 		@credits.gsub! "Empire", "Meerkat"
 		@credits.gsub! "Republic", "Meerkat"
+		@credits.gsub! "Rebel", "Meerkat"
+		@credits.gsub! "Galactic", "Meerkat"
+		@credits.gsub! "Jedi", "Meerkat"
+		@credits
 	end
 end
