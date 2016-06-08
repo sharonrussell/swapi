@@ -3,6 +3,12 @@ require_relative 'opening_crawl'
 require_relative 'crawl_swapper'
 
 class MeerkatWars
-	crawl = OpeningCrawl.new(SwapiGetter.new.get).extract
-	puts CrawlSwapper.new(crawl).swap
+	swapi_getter = SwapiGetter.new
+	swapi = swapi_getter.get
+
+	opening_crawl = OpeningCrawl.new(swapi)
+	crawl = opening_crawl.extract
+	
+	crawl_swapper = CrawlSwapper.new(crawl)
+	puts crawl_swapper.swap
 end
